@@ -1,0 +1,49 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1> Welcome to Week 5!
+</h1>
+</br>
+<h2 href="index.html">Home</h2>
+<h3>The available tasks are:
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Assigned to</td>
+            <td>Due Date</td>
+            <td>Status</td>
+            <td>Description</td>
+        </tr>
+        <% for (let i=0;i< listDb.length;i++){ %>
+        <tr>
+            <td>
+                <%= listDb[i]._id %>
+            </td>
+            <td>
+                <%= listDb[i].taskName %>
+            </td>
+            <td>
+                <%= listDb[i].taskAssign %>
+            </td>
+            <td>
+                <%= listDb[i].taskDueDate %>
+            </td>
+            <td>
+                <%= listDb[i].taskStatus %>
+            </td>
+            <td>
+                <%= listDb[i].taskDescription %>
+            </td>
+        </tr>
+        <% }%>
+    </table>
+    <a href="/">Home</a>
+    <a href="/newtask">Add New Task</a> <br>
+    <a href="/deletetasks">Delete Tasks</a>
+    <a href="/updatetasks">Update Tasks</a>
+</h3>
+</body>
+</html>
